@@ -29,3 +29,5 @@ Platformio_IDE/imgs/descanso/*
 *.zip
 *.7z
 *.rar
+# Salida de auto-py-to-exe (una carpeta output por programa)
+output/
