@@ -1,7 +1,8 @@
 # PJLM Toolbox
 
-Herramientas de escritorio que uso para desarrollo de sistemas embebidos y FPGA en
-Tesla Lab (Universidad Galileo). Cada herramienta vive en su propia carpeta y se
+Herramientas de escritorio que uso para desarrollo de sistemas embebidos y FPGA 
+
+Cada herramienta tiene su propia carpeta y se
 ejecuta por separado.
 
 | Herramienta | Para que sirve | Interfaz | Sistema |
