@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# Editores y sistema operativo
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Imagenes personales de la pestana Descanso (cada quien pone las suyas)
+Platformio_IDE/imgs/descanso/*
+!Platformio_IDE/imgs/descanso/LEEME.md
+
+# Salidas de simulacion (sim_gui.py)
+*.vvp
+*.vcd
+*.fst
+
+# Secretos locales, por si alguna herramienta los necesita
+.env
+*.local
+
+# Archivos comprimidos (no son codigo fuente)
+*.zip
+*.7z
+*.rar

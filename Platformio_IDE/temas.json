@@ -1,0 +1,153 @@
+{
+  "Reze": {
+    "fondo_app": "#141826",
+    "fondo_panel": "#1C2233",
+    "texto": "#D6DEEB",
+    "borde": "#2E3A5C",
+    "acento": "#7AA2F7",
+    "texto_acento": "#0F111A",
+    "fondo_editor": "#0F111A",
+    "texto_editor": "#D6DEEB",
+    "fondo_consola": "#0B0D14",
+    "texto_consola": "#C3CCE3",
+    "linea_actual": "#161A28",
+    "num_linea": "#3B4261",
+    "seleccion": "#2E3A5C",
+    "hl": {
+      "palabras_clave": "#BB9AF7",
+      "tipos": "#7AA2F7",
+      "funciones": "#7DCFFF",
+      "numeros": "#FF9E64",
+      "cadenas": "#9ECE6A",
+      "preprocesador": "#F7768E",
+      "comentarios": "#565F89"
+    },
+    "consola": {
+      "ok": "#9ECE6A",
+      "error": "#F7768E",
+      "aviso": "#E0AF68",
+      "info": "#7AA2F7"
+    },
+    "bg": "reze.jpg"
+  },
+  "Classic": {
+    "fondo_app": "#E9ECEC",
+    "fondo_panel": "#F4F6F6",
+    "texto": "#1E1E1E",
+    "borde": "#C9CFCF",
+    "acento": "#008184",
+    "texto_acento": "#FFFFFF",
+    "fondo_editor": "#FFFFFF",
+    "texto_editor": "#1E1E1E",
+    "fondo_consola": "#FAFAFA",
+    "texto_consola": "#222222",
+    "linea_actual": "#F1F6F6",
+    "num_linea": "#A0A6A6",
+    "seleccion": "#BFE3E4",
+    "hl": {
+      "palabras_clave": "#7B00A0",
+      "tipos": "#00979C",
+      "funciones": "#D35400",
+      "numeros": "#0000CC",
+      "cadenas": "#A31515",
+      "preprocesador": "#5E6D03",
+      "comentarios": "#2A6000"
+    },
+    "consola": {
+      "ok": "#1A7F37",
+      "error": "#CF222E",
+      "aviso": "#9A6700",
+      "info": "#0550AE"
+    }
+  },
+  "Dark": {
+    "fondo_app": "#252526",
+    "fondo_panel": "#2D2D2D",
+    "texto": "#D4D4D4",
+    "borde": "#3C3C3C",
+    "acento": "#0E9AA7",
+    "texto_acento": "#FFFFFF",
+    "fondo_editor": "#1E1E1E",
+    "texto_editor": "#D4D4D4",
+    "fondo_consola": "#181818",
+    "texto_consola": "#CCCCCC",
+    "linea_actual": "#262626",
+    "num_linea": "#5A5A5A",
+    "seleccion": "#264F78",
+    "hl": {
+      "palabras_clave": "#C586C0",
+      "tipos": "#4EC9B0",
+      "funciones": "#DCDCAA",
+      "numeros": "#B5CEA8",
+      "cadenas": "#CE9178",
+      "preprocesador": "#569CD6",
+      "comentarios": "#6A9955"
+    },
+    "consola": {
+      "ok": "#4EC9B0",
+      "error": "#F44747",
+      "aviso": "#DCDCAA",
+      "info": "#569CD6"
+    }
+  },
+  "Catppuccin Mocha": {
+    "fondo_app": "#11111B",
+    "fondo_panel": "#181825",
+    "texto": "#CDD6F4",
+    "borde": "#313244",
+    "acento": "#CBA6F7",
+    "texto_acento": "#11111B",
+    "fondo_editor": "#1E1E2E",
+    "texto_editor": "#CDD6F4",
+    "fondo_consola": "#181825",
+    "texto_consola": "#BAC2DE",
+    "linea_actual": "#25253A",
+    "num_linea": "#585B70",
+    "seleccion": "#45475A",
+    "hl": {
+      "palabras_clave": "#CBA6F7",
+      "tipos": "#F9E2AF",
+      "funciones": "#89B4FA",
+      "numeros": "#FAB387",
+      "cadenas": "#A6E3A1",
+      "preprocesador": "#F5C2E7",
+      "comentarios": "#6C7086"
+    },
+    "consola": {
+      "ok": "#A6E3A1",
+      "error": "#F38BA8",
+      "aviso": "#F9E2AF",
+      "info": "#89B4FA"
+    }
+  },
+  "Solarized": {
+    "fondo_app": "#EEE8D5",
+    "fondo_panel": "#F5EFDC",
+    "texto": "#586E75",
+    "borde": "#D3CBB7",
+    "acento": "#268BD2",
+    "texto_acento": "#FDF6E3",
+    "fondo_editor": "#FDF6E3",
+    "texto_editor": "#586E75",
+    "fondo_consola": "#F5EFDC",
+    "texto_consola": "#586E75",
+    "linea_actual": "#F5EEDB",
+    "num_linea": "#B3AD9C",
+    "seleccion": "#E3DCC6",
+    "hl": {
+      "palabras_clave": "#859900",
+      "tipos": "#B58900",
+      "funciones": "#268BD2",
+      "numeros": "#D33682",
+      "cadenas": "#2AA198",
+      "preprocesador": "#CB4B16",
+      "comentarios": "#93A1A1"
+    },
+    "consola": {
+      "ok": "#859900",
+      "error": "#DC322F",
+      "aviso": "#B58900",
+      "info": "#268BD2"
+    }
+  }
+}
