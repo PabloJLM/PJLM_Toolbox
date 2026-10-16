@@ -9,6 +9,7 @@ ejecuta por separado.
 |---|---|---|---|
 | [Platformio_IDE](#platformio_ide--jojop-pio) | IDE liviano sobre PlatformIO Core (compilar, subir, monitor serie, terminal) | PyQt5 | Windows (con WSL) y Linux |
 | [FPGA_IDE](#fpga_ide--jojop-ide) | IDE de ensamblador para el microcontrolador Zenith-Core y probador de testbenches | PyQt5 / Tkinter | Windows y Linux |
+| [u8g2Studio](#u8g2studio) | Editor visual que edita directamente el codigo de pantallas u8g2 / U8x8 / Adafruit_GFX (sin generar codigo nuevo para pegar) | PyQt5 | Windows y Linux |
 | [Flasher_ESP32](#flasher_esp32) | Grabar binarios en ESP32 con esptool | Tkinter | Windows y Linux |
 | [Flasher_PY32](#flasher_py32) | Grabar y verificar microcontroladores PY32 (Puya) con ST-Link | Tkinter | Linux |
 
@@ -55,6 +56,31 @@ cd FPGA_IDE
 python JoJoP_IDE.py
 python sim_gui.py              # requiere iverilog en el PATH; gtkwave opcional
 ```
+
+## u8g2Studio
+
+Editor visual para pantallas monocromaticas (u8g2 / U8x8 / Adafruit_GFX) que
+edita directamente el codigo que ya tienes en vez de generar codigo nuevo
+para copiar: abre la carpeta del sketch, interpreta las funciones que dibujan
+y al mover un elemento reescribe el numero exacto dentro de la llamada.
+
+- Pestana de pantallas (arrastrar/redimensionar, panel de propiedades por
+  elemento) y pestana de pixel art (editor 1-bit para los arreglos de bytes
+  del proyecto, con import de PNG/JPG).
+- Sigue variables hasta su declaracion, desenrolla bucles con limite
+  resoluble y respeta expresiones (`SCREEN_W - w - 2`, etc.), volteando el
+  operador si el valor cruza el cero.
+- No crea archivo de proyecto ni `.bak`: nada toca el disco hasta `Ctrl+S`,
+  que parchea el texto original.
+
+```bash
+pip install PyQt5 Pillow        # Pillow es opcional, solo para importar imagenes
+cd u8g2Studio
+python u8g2_studio.py            # o: python u8g2_studio.py ruta/al/sketch
+```
+
+Mas detalle (atajos, estructura interna, que no hace) en
+[u8g2Studio/README.md](u8g2Studio/README.md).
 
 ## Flasher_ESP32
 
