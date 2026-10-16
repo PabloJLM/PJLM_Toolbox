@@ -8,6 +8,7 @@ Uso:  python jojop_pio.py [carpeta_del_proyecto]
 from __future__ import annotations
 
 import base64
+import ctypes
 import configparser
 import json
 import os
@@ -19,7 +20,7 @@ from pathlib import Path
 
 from PyQt5.QtCore import (QFileSystemWatcher, QModelIndex, QSettings, QSize,
                           QSortFilterProxyModel, Qt, QTimer, QUrl, pyqtSignal)
-from PyQt5.QtGui import QDesktopServices, QFont, QFontDatabase, QKeySequence
+from PyQt5.QtGui import QDesktopServices, QFont, QFontDatabase, QIcon, QKeySequence
 from PyQt5.QtWidgets import (QAction, QActionGroup, QApplication, QComboBox, QFileDialog,
                              QFileSystemModel, QHBoxLayout, QInputDialog, QLabel, QMainWindow,
                              QMenu, QMessageBox, QPushButton, QSizePolicy, QSplitter,
@@ -38,6 +39,7 @@ from terminal import Terminal
 APP = "JoJoP PIO"
 VERSION = "1.0"
 BASE = Path(__file__).resolve().parent
+ICONO = BASE / "icono1.ico"
 SCRIPT_MONITOR = BASE / "monitor_serie.py"
 OCULTOS = {".pio", ".git", "__pycache__", ".vscode", ".idea", ".DS_Store"}
 RX_USO = re.compile(r"^(RAM|Flash):\s*\[.*?\]\s*([\d.]+%)")
@@ -447,7 +449,10 @@ class Ventana(QMainWindow):
             b.setIcon(icono(b.property("icono"), self.t["texto_acento"]))
         self.btn_refrescar.setIcon(icono("refrescar", self.t["texto"]))
         self.btn_monitor.setIcon(icono("monitor", self.t["texto"]))
-        self.setWindowIcon(icono("app", self.t["acento"], 32))
+        if ICONO.exists():
+            self.setWindowIcon(QIcon(str(ICONO)))
+        else:
+            self.setWindowIcon(icono("app", self.t["acento"], 32))
         self.salida.set_tema(self.t)
         for term in (self.terminal, self.term_usb):
             if term:
@@ -1206,6 +1211,11 @@ class Ventana(QMainWindow):
 def main():
     QApplication.setAttribute(Qt.AA_EnableHighDpiScaling, True)
     QApplication.setAttribute(Qt.AA_UseHighDpiPixmaps, True)
+    if ES_WINDOWS:
+        try:
+            ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID("PabloJLM.JoJoP_PIO")
+        except Exception:
+            pass
     app = QApplication(sys.argv)
     app.setApplicationName(APP)
     app.setStyle("Fusion")
