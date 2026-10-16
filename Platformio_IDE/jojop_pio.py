@@ -689,7 +689,7 @@ class Ventana(QMainWindow):
         i = self.pestanas.indexOf(ed)
         if i >= 0:
             nombre = Path(ed.ruta).name if ed.ruta else "sin titulo"
-            self.pestanas.setTabText(i, nombre + ("  ●" if ed.document().isModified() else ""))
+            self.pestanas.setTabText(i, nombre + ("  *" if ed.document().isModified() else ""))
 
     def _pestana_cambiada(self, _i):
         ed = self.editor_actual()
@@ -994,13 +994,13 @@ class Ventana(QMainWindow):
         self._reloj.stop()
         titulo, ok = self._tarea_info
         if self.tarea.fue_detenido:
-            self.salida.agregar("✖ Detenido", "aviso")
+            self.salida.agregar("[STOP] Detenido", "aviso")
             self._estado("Detenido")
         elif codigo == 0:
-            self.salida.agregar(f"✔ {ok}  ({segundos:.1f} s)", "ok")
+            self.salida.agregar(f"[OK] {ok}  ({segundos:.1f} s)", "ok")
             self._estado(f"{ok}  ({segundos:.1f} s)")
         else:
-            self.salida.agregar(f"✖ Error (codigo {codigo}). Doble clic en una linea de error para ir al archivo.", "error")
+            self.salida.agregar(f"[ERROR] Error (codigo {codigo}). Doble clic en una linea de error para ir al archivo.", "error")
             self._estado(f"Error en: {titulo.lower()}")
         if self._uso:
             self.lbl_uso.setText("   ".join(f"{k} {v}" for k, v in self._uso.items()))

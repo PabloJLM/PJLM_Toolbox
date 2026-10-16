@@ -62,7 +62,7 @@ class PanelSalida(QPlainTextEdit):
         if len(self._lineas) > 5000:
             del self._lineas[:1000]
         color = self.colores.get(tipo, self.colores["normal"])
-        peso = "font-weight:bold;" if texto.startswith(("$", "✔", "✖")) else ""
+        peso = "font-weight:bold;" if texto.startswith(("$", "[OK]", "[ERROR]", "[STOP]")) else ""
         self.appendHtml(f'<span style="color:{color};{peso}white-space:pre">{html.escape(texto)}</span>')
 
     def mouseDoubleClickEvent(self, e):

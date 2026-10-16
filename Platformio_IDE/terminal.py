@@ -309,8 +309,8 @@ class Terminal(QWidget):
     def _actualizar_prompt(self):
         texto = self._texto_prompt()
         if len(texto) > 48:
-            texto = "…" + texto[-47:]
-        self.prompt.setText(texto + ("  ⏳" if self.ocupado and self.activo() else ""))
+            texto = "..." + texto[-45:]
+        self.prompt.setText(texto + ("  [...]" if self.ocupado and self.activo() else ""))
         self.btn_int.setEnabled(self.activo())
 
     def set_tema(self, t: dict):

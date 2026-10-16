@@ -10,6 +10,7 @@ ejecuta por separado.
 | [Platformio_IDE](#platformio_ide--jojop-pio) | IDE liviano sobre PlatformIO Core (compilar, subir, monitor serie, terminal) | PyQt5 | Windows (con WSL) y Linux |
 | [FPGA_IDE](#fpga_ide--jojop-ide) | IDE de ensamblador para el microcontrolador Zenith-Core y probador de testbenches | PyQt5 / Tkinter | Windows y Linux |
 | [u8g2Studio](#u8g2studio) | Editor visual que edita directamente el codigo de pantallas u8g2 / U8x8 / Adafruit_GFX (sin generar codigo nuevo para pegar) | PyQt5 | Windows y Linux |
+| [Theme_Generator](#theme_generator) | Generador de paletas / temas a partir de 2 a 5 colores semilla; exporta a C++ (RGB565), JSON, CSS o lista hex | Tkinter | Windows y Linux |
 | [Flasher_ESP32](#flasher_esp32) | Grabar binarios en ESP32 con esptool | Tkinter | Windows y Linux |
 | [Flasher_PY32](#flasher_py32) | Grabar y verificar microcontroladores PY32 (Puya) con ST-Link | Tkinter | Linux |
 
@@ -81,6 +82,28 @@ python u8g2_studio.py            # o: python u8g2_studio.py ruta/al/sketch
 
 Mas detalle (atajos, estructura interna, que no hace) en
 [u8g2Studio/README.md](u8g2Studio/README.md).
+
+## Theme_Generator
+
+Genera un tema completo (fondo, superficies, bordes, acentos, texto) a partir de
+2 a 5 colores semilla. Detecta solo cuales hacen de fondo, texto, color primario y
+acento, deriva el resto de los roles y calcula el texto con contraste suficiente
+sobre el acento. Sirve para crear los temas de las pantallas (por ejemplo el
+`temas.cpp` de Purple_Deck) o de las IDEs.
+
+- 2 a 5 colores de entrada y 3 a 10 roles de salida a elegir (`background`,
+  `surface`, `surfaceAlt`, `border`, `primary`, `accent`, `accentAlt`, `text`,
+  `textMuted`, `textOnAccent`, `success`, `warning`, `danger`, `info`, etc.).
+- Presets de partida (Afton, Bosque, Cyberpunk, Cafe, Oceano, Minimal) y modo claro.
+- Exporta a C++ con `rgb565(...)` listo para pegar en una tabla de temas, a JSON,
+  a variables CSS o a una lista hex. Se puede copiar o guardar a archivo.
+
+```bash
+cd Theme_Generator
+python colors.py
+```
+
+Solo usa la biblioteca estandar (Tkinter incluido).
 
 ## Flasher_ESP32
 
