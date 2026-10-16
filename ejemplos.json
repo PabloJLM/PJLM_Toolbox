@@ -1,0 +1,52 @@
+{
+  "snippets": {
+    "Hola LEDs": {
+      "desc": "Enciende los 6 LEDs de la Tang Nano 9K en secuencia.",
+      "code": "; Hola LEDs — enciende r1 y lo muestra en GPIO\n    ADDI r1, r0, 1          ; r1 = 1\nmain:\n    OUT  r1                 ; gpio_out = r1\n    ADDI r1, r1, 1          ; r1++\n    JUMP main               ; loop\n"
+    },
+    "Construir 0x80": {
+      "desc": "Base MMIO en r6. Hacerlo una vez al inicio de cada programa.",
+      "code": "; Construir 0x80 = 128 en r6  (base MMIO)\n    ADDI r5, r0, 8          ; r5 = 8\n    ADDI r4, r0, 4          ; r4 = 4  (shift amount)\n    SLL  r6, r5, r4         ; r6 = 8 << 4 = 0x80\n"
+    },
+    "Delay con contador": {
+      "desc": "Pausa por software usando un loop de resta.",
+      "code": "; Delay — r2 iteraciones\n    ADDI r2, r0, 15         ; r2 = 15 iteraciones\ndelay_loop:\n    ADDI r2, r2, -1         ; r2--\n    BEQ  r2, r0, delay_done ; si r2 == 0, salir\n    JUMP delay_loop\ndelay_done:\n"
+    },
+    "GPIO salida": {
+      "desc": "Configura todos los pines como salida y escribe un valor.",
+      "code": "; GPIO salida — requiere r6 = 0x80\n    ADDI r1, r0, -1         ; r1 = 0xFF\n    STORE r1, r6, 2         ; GPIO_DIR = 0xFF (todos salida)\n    ADDI r1, r0, 5\n    STORE r1, r6, 0         ; GPIO_OUT = 5\n"
+    },
+    "GPIO lectura": {
+      "desc": "Lee el estado de los pines de entrada.",
+      "code": "; GPIO lectura — requiere r6 = 0x80\n    LOAD  r2, r6, 1         ; r2 = GPIO_IN (0x81)\n"
+    },
+    "UART enviar byte": {
+      "desc": "Espera que UART esté libre y envía un byte.",
+      "code": "; UART TX — requiere r6 = 0x80, r1 = byte a enviar\nuart_esperar:\n    LOAD  r4, r6, 4         ; r4 = UART_STAT (0x84)\n    ANDI  r4, r4, 1         ; r4 = bit busy\n    BEQ   r4, r0, uart_ok   ; si busy==0, enviar\n    JUMP  uart_esperar\nuart_ok:\n    STORE r1, r6, 3         ; UART_TX = r1 (0x83)\n"
+    },
+    "PWM habilitar": {
+      "desc": "Habilita PWM con duty cycle al 50%.",
+      "code": "; PWM 50% — requiere r6 = 0x80\n    ADDI r1, r0, 1\n    STORE r1, r6, 6         ; PWM_CTRL = 1 (enable)\n    ADDI r5, r0, 8\n    ADDI r4, r0, 4\n    SLL  r1, r5, r4         ; r1 = 128 (50%)\n    STORE r1, r6, 5         ; PWM_DUTY = 128\n"
+    },
+    "Subrutina con JAL": {
+      "desc": "Llamada y retorno a subrutina usando JAL y r7.",
+      "code": "; Subrutina — r7 guarda la dirección de retorno\nmain:\n    ADDI r1, r0, 5\n    JAL  r7, duplicar       ; r7 = addr retorno\n    JUMP main\n\nduplicar:\n    ADD  r1, r1, r1         ; r1 = r1 * 2\n    JUMP main               ; retornar (fijo)\n"
+    },
+    "Comparar si igual": {
+      "desc": "Equivalente a if (r1 == r2).",
+      "code": "; if r1 == r2\n    BEQ  r1, r2, son_iguales\n    JUMP no_iguales\nson_iguales:\n    ; codigo si iguales\nno_iguales:\n"
+    },
+    "Comparar si distinto": {
+      "desc": "Equivalente a if (r1 != r2). No existe BNE, se usa SUB.",
+      "code": "; if r1 != r2  (no hay BNE, usar SUB)\n    SUB  r4, r1, r2         ; r4 = r1 - r2\n    BEQ  r4, r0, son_iguales\n    ; aqui r1 != r2\nson_iguales:\n"
+    },
+    "Comparar si mayor": {
+      "desc": "Equivalente a if (r1 > r2) usando SLT.",
+      "code": "; if r1 > r2\n    SLT  r4, r2, r1         ; r4 = (r2 < r1)\n    BEQ  r4, r0, no_mayor   ; si r4==0, no es mayor\n    ; aqui r1 > r2\nno_mayor:\n"
+    },
+    "Construir valor > 7": {
+      "desc": "Construir constantes que no caben en imm4 (-8 a +7).",
+      "code": "; Construir 65 = 'A'\n    ADDI r5, r0, 8\n    ADDI r4, r0, 3\n    SLL  r1, r5, r4         ; r1 = 64\n    ADDI r1, r1, 1          ; r1 = 65\n\n; Construir 0xFF = 255 = -1\n    ADDI r1, r0, -1         ; complemento a 2\n"
+    }
+  }
+}

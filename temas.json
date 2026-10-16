@@ -1,0 +1,299 @@
+{
+  "Básicos": {
+    "Classic": {
+      "fondo_editor": "#FFFFFF",
+      "texto_editor": "#000000",
+      "fondo_consola": "#F0F0F0",
+      "texto_consola": "#111111",
+      "fondo_app": "#DDDDDD",
+      "qss_extra": "",
+      "tab_sel": "#AAAAAA",
+      "hl": {
+        "instrucciones": "#7B00A0",
+        "registros": "#B85C00",
+        "inmediatos": "#0000CC",
+        "etiquetas": "#CC0000",
+        "comentarios": "#2A6000"
+      }
+    },
+    "Dark": {
+      "fondo_editor": "#1E1E1E",
+      "texto_editor": "#D4D4D4",
+      "fondo_consola": "#141414",
+      "texto_consola": "#CCCCCC",
+      "fondo_app": "#252526",
+      "qss_extra": "background:#3C3C3C; color:#D4D4D4; border:1px solid #555;",
+      "tab_sel": "#555555",
+      "hl": {
+        "instrucciones": "#94018D",
+        "registros": "#FF9900",
+        "inmediatos": "#5599FF",
+        "etiquetas": "#FF4444",
+        "comentarios": "#4A9A1A"
+      }
+    },
+    "Catppuccin Mocha": {
+      "fondo_editor": "#1E1E2E",
+      "texto_editor": "#CDD6F4",
+      "fondo_consola": "#181825",
+      "texto_consola": "#BAC2DE",
+      "fondo_app": "#11111B",
+      "qss_extra": "background:#313244; color:#CDD6F4; border:1px solid #45475A;",
+      "tab_sel": "#45475A",
+      "hl": {
+        "instrucciones": "#CBA6F7",
+        "registros": "#FAB387",
+        "inmediatos": "#89B4FA",
+        "etiquetas": "#F38BA8",
+        "comentarios": "#A6E3A1"
+      }
+    },
+    "Solarized": {
+      "fondo_editor": "#FDF6E3",
+      "texto_editor": "#657B83",
+      "fondo_consola": "#EEE8D5",
+      "texto_consola": "#586E75",
+      "fondo_app": "#E8E0C8",
+      "qss_extra": "background:#D5CDB8; color:#586E75; border:1px solid #B3A990;",
+      "tab_sel": "#B3A990",
+      "hl": {
+        "instrucciones": "#268BD2",
+        "registros": "#CB4B16",
+        "inmediatos": "#2AA198",
+        "etiquetas": "#D30102",
+        "comentarios": "#93A1A1"
+      }
+    }
+  },
+  "Sci-Fi": {
+    "Purple Guy": {
+      "fondo_editor": "#1A0D2E",
+      "texto_editor": "#E8D5FF",
+      "fondo_consola": "#120920",
+      "texto_consola": "#C9A8FF",
+      "fondo_app": "#0F0718",
+      "qss_extra": "background:#2A1245; color:#D4A8FF; border:1px solid #6A2FA0;",
+      "tab_sel": "#5C2090",
+      "hl": {
+        "instrucciones": "#C56EFF",
+        "registros": "#FFB830",
+        "inmediatos": "#9B59FF",
+        "etiquetas": "#FF85C2",
+        "comentarios": "#5A4A6A"
+      },
+      "bg": "afton.jpg"
+    },
+    "Mustafar": {
+      "fondo_editor": "#0D0D0D",
+      "texto_editor": "#E0E0E0",
+      "fondo_consola": "#080808",
+      "texto_consola": "#CCCCCC",
+      "fondo_app": "#1A0000",
+      "qss_extra": "background:#330000; color:#FFB347; border:1px solid #660000;",
+      "tab_sel": "#660000",
+      "hl": {
+        "instrucciones": "#FF2D2D",
+        "registros": "#FF6A00",
+        "inmediatos": "#FFD166",
+        "etiquetas": "#FF4444",
+        "comentarios": "#884444"
+      },
+      "bg": "mustafar.jpg"
+    },
+    "Matrix": {
+      "fondo_editor": "#000000",
+      "texto_editor": "#00FF00",
+      "fondo_consola": "#000000",
+      "texto_consola": "#00FF00",
+      "fondo_app": "#050505",
+      "qss_extra": "background:#001100; color:#00FF00; border:1px solid #00AA00;",
+      "tab_sel": "#003300",
+      "hl": {
+        "instrucciones": "#00FF00",
+        "registros": "#00CC00",
+        "inmediatos": "#66FF66",
+        "etiquetas": "#00FFAA",
+        "comentarios": "#007700"
+      },
+      
+      "bg": "matrix.jpg"
+    },
+    "Halo": {
+      "fondo_editor": "#0A1018",
+      "texto_editor": "#C8E0F0",
+      "fondo_consola": "#060C12",
+      "texto_consola": "#94B8CC",
+      "fondo_app": "#070E16",
+      "qss_extra": "background:#0D1F2D; color:#7EC8E3; border:1px solid #1A4A6A;",
+      "tab_sel": "#1A4A6A",
+      "hl": {
+        "instrucciones": "#00BFFF",
+        "registros": "#4FC3F7",
+        "inmediatos": "#80DEEA",
+        "etiquetas": "#26C6DA",
+        "comentarios": "#2A4A5A"
+      },
+      "bg": "halo.jpg"
+    }
+  },
+  "Coloridos": {
+    "Blossom Rush": {
+      "fondo_editor": "#FFFFFF",
+      "texto_editor": "#2E2E2E",
+      "fondo_consola": "#FFF0F6",
+      "texto_consola": "#4A4A4A",
+      "fondo_app": "#FFE4F0",
+      "qss_extra": "background:#FFB3D9; color:#2E2E2E; border:1px solid #FF66B2;",
+      "tab_sel": "#FF66B2",
+      "hl": {
+        "instrucciones": "#FF1493",
+        "registros": "#C71585",
+        "inmediatos": "#8A2BE2",
+        "etiquetas": "#FF3366",
+        "comentarios": "#A0A0A0"
+      },
+      "bg": "cherry.jpeg"
+    },
+    "Barbie Cyberpunk": {
+      "fondo_editor": "#0D0B1A",
+      "texto_editor": "#F8F8FF",
+      "fondo_consola": "#080712",
+      "texto_consola": "#E6E6FA",
+      "fondo_app": "#140F2A",
+      "qss_extra": "background:#2A1B5E; color:#FF77FF; border:1px solid #FF00AA;",
+      "tab_sel": "#FF00AA",
+      "hl": {
+        "instrucciones": "#FF00FF",
+        "registros": "#FF77FF",
+        "inmediatos": "#00E5FF",
+        "etiquetas": "#FF4081",
+        "comentarios": "#9C6EFF"
+      }
+    },
+    "Dracula": {
+      "fondo_editor": "#282A36",
+      "texto_editor": "#F8F8F2",
+      "fondo_consola": "#1E2029",
+      "texto_consola": "#BFBFBF",
+      "fondo_app": "#191A21",
+      "qss_extra": "background:#44475A; color:#F8F8F2; border:1px solid #6272A4;",
+      "tab_sel": "#6272A4",
+      "hl": {
+        "instrucciones": "#FF79C6",
+        "registros": "#FFB86C",
+        "inmediatos": "#BD93F9",
+        "etiquetas": "#FF5555",
+        "comentarios": "#6272A4"
+      }
+    },
+    "Nord Sunset": {
+      "fondo_editor": "#2E3440",
+      "texto_editor": "#ECEFF4",
+      "fondo_consola": "#242830",
+      "texto_consola": "#D8DEE9",
+      "fondo_app": "#1E222A",
+      "qss_extra": "background:#3B4252; color:#E5E9F0; border:1px solid #BF616A;",
+      "tab_sel": "#BF616A",
+      "hl": {
+        "instrucciones": "#BF616A",
+        "registros": "#D08770",
+        "inmediatos": "#EBCB8B",
+        "etiquetas": "#B48EAD",
+        "comentarios": "#4C566A"
+      },
+      "bg": "teto.jpg"
+    }
+  },
+  "Reze": {
+    "Iris Out": {
+      "fondo_editor": "#1A0A0C",
+      "texto_editor": "#EDE0D4",
+      "fondo_consola": "#120608",
+      "texto_consola": "#C8B8A8",
+      "fondo_app": "#0E0608",
+      "qss_extra": "background:#2A1018; color:#D4B89A; border:1px solid #6B1A22;",
+      "tab_sel": "#7A1E28",
+      "hl": {
+        "instrucciones": "#C8424E",
+        "registros": "#D4A843",
+        "inmediatos": "#2A8A88",
+        "etiquetas": "#8A3060",
+        "comentarios": "#4A3038"
+      },
+      
+      "bg": "iris_out.jpg"
+    },
+    "Reze": {
+      "fondo_editor": "#0F111A",
+      "texto_editor": "#D6DEEB",
+      "fondo_consola": "#0B0D14",
+      "texto_consola": "#C3CCE3",
+      "fondo_app": "#141826",
+      "qss_extra": "background:#1C2233; color:#D6DEEB; border:1px solid #2E3A5C;",
+      "tab_sel": "#2E3A5C",
+      "hl": {
+        "instrucciones": "#7AA2F7",
+        "registros": "#F7768E",
+        "inmediatos": "#9ECE6A",
+        "etiquetas": "#BB9AF7",
+        "comentarios": "#565F89"
+      },
+      
+      "bg": "reze.jpg"
+    },
+    "In the Pool": {
+      "fondo_editor": "#101A24",
+      "texto_editor": "#D7E3F4",
+      "fondo_consola": "#0C141C",
+      "texto_consola": "#C8D6EB",
+      "fondo_app": "#162433",
+      "qss_extra": "background:#1F3347; color:#D7E3F4; border:1px solid #3A5A7A;",
+      "tab_sel": "#3A5A7A",
+      "hl": {
+        "instrucciones": "#7DCFFF",
+        "registros": "#F2A7C4",
+        "inmediatos": "#E0AF68",
+        "etiquetas": "#9ECEFF",
+        "comentarios": "#5C6A82"
+      },
+      
+      "bg": "in_the_pool.jpg"
+    },
+    "Miss Bomb": {
+      "fondo_editor": "#0A0A0A",
+      "texto_editor": "#F5F5F5",
+      "fondo_consola": "#050505",
+      "texto_consola": "#E0E0E0",
+      "fondo_app": "#140000",
+      "qss_extra": "background:#2A0000; color:#FFB3B3; border:1px solid #FF2D2D;",
+      "tab_sel": "#FF2D2D",
+      "hl": {
+        "instrucciones": "#FF2D2D",
+        "registros": "#FF6A00",
+        "inmediatos": "#FFD166",
+        "etiquetas": "#FF4C4C",
+        "comentarios": "#6B2A2A"
+      },
+      
+      "bg": "miss_bomb.jpg"
+    },
+    "Jane Doe": {
+      "fondo_editor": "#080808",
+      "texto_editor": "#E8E8E8",
+      "fondo_consola": "#040404",
+      "texto_consola": "#AAAAAA",
+      "fondo_app": "#060606",
+      "qss_extra": "background:#111111; color:#AAAAAA; border:1px solid #2A2A2A;",
+      "tab_sel": "#1E1E1E",
+      "hl": {
+        "instrucciones": "#D8D8D8",
+        "registros": "#989898",
+        "inmediatos": "#B8B8B8",
+        "etiquetas": "#F0F0F0",
+        "comentarios": "#484848"
+      },
+      
+      "bg": "jane_doe.jpg"
+    }
+  }
+}
